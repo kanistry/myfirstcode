@@ -191,6 +191,7 @@ nav ul li a:hover::after{
     border: 1px solid #080808;
     padding: 10px;
     border-radius: 5px;
+    transition: 1s
 }
 .services-list div a:hover{
     background: #fffee9;
