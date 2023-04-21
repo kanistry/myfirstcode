@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="css/all.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        <title>Trust's Profile-Personal Information</title>
+    </head>
+    <body>
+        <!--Start Header Section-->
+        <div id="header">
+            <div class="contenier">
+                <nav id="sidemenu">
+                    <img src="img/logo.png" alt="logo" class="logo">
+                    <ul>
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                    </ul>
+                    <div class="header-text">
+                        <p>Web Designer/Graphic Artist</p>
+                        <h1>I am<br>Trust<br><span>Aca-ac</span></h1>
+                    </div>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                </nav>
+            </div>
+        </div>
+        <!--End of Header Section-->
+
+        <!--Start About Section-->
+        <div id="about">
+            <div class="contenier1">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="img/trust.png">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">ABOUT ME:</h1>
+                        <p>Proficient in editing tools, Trust can make almost every work possible as long as he study it first. Armed with 4 years of experience He can almost make editing things as possible.</p>
+                        <div class="tab-titles">
+                         <p class="tab-links active-link " onclick="opentab('skills')">Skills</p>
+                         <p class="tab-links" onclick="opentab('educ-attain')">Educational Attainment</p>
+                         <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Photography</span><br>Amateur Photographer</li>
+                                <li><span>Videography</span><br>Amateur Videographer</li>
+                                <li><span>Adobe-Related Tools</span><br>Proficient in using Adobe-related tools</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="educ-attain">
+                            <ul>
+                                <li><span>Primary:</span><br>St. Francis High School/Mabolo Elementary School</li>
+                                <li><span>Secondary:</span><br>St. Francis High school/Mabolo National High School</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>Freelance</span><br>Mostly doing Photography and Videography</li>
+                                <li><span>Trainee at Elise Advertising</span><br>Making designs for signages and company-related matters</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End About Section -->
+
+        <!-- Service Section Start -->
+        <div id="services">
+            <div class="contenier">
+                <h1 class="sub-title2">Services</h1>
+                <p>These are the services that are available for all:</p>
+                <div class="services-list">
+                    <div>
+                        <img src="img/camera.png">
+                        <h2>Photography</h2>
+                        <a href="#">Learn More</a>
+                    </div>
+                    <div>
+                        <img src="img/monitor.png">
+                        <h2>Photo/Video Editing</h2>
+                        <a href="#">Learn More</a>
+                    </div>
+                    <div>
+                        <img src="img/video camera.png">
+                        <h2>Videography</h2>
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Service Section End -->
+
+        <!-- Portfolio Section Start -->
+        <div id="portfolio">
+            <div class="contenier">
+                <h1 class="sub-title">My Work</h1>
+                <p>These are the works I created using tools</p>
+                <div class="worklist">
+                    <div class="work1">
+                        <img src="img/work1 (1).jpg">
+                    </div>
+                    <div class="work2">
+                        <img src="img/work1 (2).jpg">
+                    </div>
+                    <div class="work3">
+                        <img src="img/work1 (3).jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Section End -->
+
+        <!-- Contact Section Start -->
+        <div id="contact">
+            <div class="contenier">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title3">Contact Me</h1>
+                        <p><i class="fa-solid fa-paper-plane"></i>Contact@example.com</p>
+                        <p><i class="fa-solid fa-square-phone-flip"></i>09099995529</p>
+                     <div class="social-icons">
+                        <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-square-behance"></i></a>
+                     </div>
+                     <a href="" class="btn">Download CV</a>
+                    </div>
+                    <div class="contact-right">
+                        <form>
+                            <input type="Text" name="Name" placeholder="Your Name" required>
+                            <input type="Email" name="Email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="Submit" class="btn">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link")
+                document.getElementById(tabname).classList.add("active-tab")
+            }   
+        </script>
+
+    <script>
+            var sidmenu = document.getElementById("sidmenu");
+            function openmenu(){
+                sidmenu.style.right ="0";
+            }
+            function closemenu(){
+                sidmenu.style.right ="-200px";
+            }
+    </script>
+    </body>
+</html>
